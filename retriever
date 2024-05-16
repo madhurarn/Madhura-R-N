@@ -1,0 +1,18 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class Retriever {
+    private List<String> documents;
+
+    public Retriever() {
+        documents = new ArrayList<>();
+        // Load documents into the list (e.g., from a database or a file)
+    }
+
+    public List<String> retrieve(String query) {
+        List<String> relevantDocs = new ArrayList<>();
+        // Implement your retrieval logic (e.g., keyword matching, TF-IDF, BM25)
+        // Add the relevant documents to the relevantDocs list
+        return relevantDocs;
+    }
+}
