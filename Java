@@ -1,0 +1,23 @@
+import java.util.List;
+
+public class Chatbot {
+    private Retriever retriever;
+    private Generator generator;
+
+    public Chatbot() {
+        retriever = new Retriever();
+        generator = new Generator();
+    }
+
+    public String getResponse(String query) {
+        List<String> context = retriever.retrieve(query);
+        return generator.generateResponse(query, context);
+    }
+
+    public static void main(String[] args) {
+        Chatbot chatbot = new Chatbot();
+        String query = "What is the capital of France?";
+        String response = chatbot.getResponse(query);
+        System.out.println("Chatbot: " + response);
+    }
+}
